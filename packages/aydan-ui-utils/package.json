@@ -28,6 +28,10 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.12.0"
+  },
   "devDependencies": {
     "@brionmario/eslint-plugin": "^0.2.9",
     "@brionmario/prettier-config": "^0.1.0",
