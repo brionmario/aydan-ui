@@ -22,4 +22,4 @@
  * SOFTWARE.
  */
 
-export {default} from './cn';
+export {default as cn} from './cn';
