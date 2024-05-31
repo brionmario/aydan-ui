@@ -22,7 +22,9 @@
  * SOFTWARE.
  */
 
-module.exports = {
+import type {Config} from '@jest/types';
+
+const jestConfig: Config.InitialOptions = {
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {},
   preset: 'ts-jest',
@@ -38,3 +40,5 @@ module.exports = {
     ],
   },
 };
+
+export default jestConfig;
