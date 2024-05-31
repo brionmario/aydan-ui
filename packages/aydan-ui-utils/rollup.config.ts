@@ -22,21 +22,25 @@
  * SOFTWARE.
  */
 
-const commonjs = require('@rollup/plugin-commonjs');
-const resolve = require('@rollup/plugin-node-resolve');
-const typescript = require('@rollup/plugin-typescript');
-const dts = require('rollup-plugin-dts');
-const peerDepsExternal = require('rollup-plugin-peer-deps-external');
-const {terser} = require('rollup-plugin-terser');
-const path = require('path');
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import {terser} from 'rollup-plugin-terser';
+import path, {dirname} from 'path';
+import {fileURLToPath} from 'url';
+import {RollupOptions} from 'rollup';
+import pkg from './package.json' assert {type: 'json'};
 
-const pkg = require('./package.json');
+// eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle
+const __dirname: string = dirname(fileURLToPath(import.meta.url));
 
-const LIB_TSCONFIG = path.resolve(__dirname, 'tsconfig.lib.json');
-const MERGED_TYPINGS_INPUT = path.resolve(__dirname, path.join('dist', 'esm', 'types', 'index.d.ts'));
-const MERGED_TYPINGS_OUTPUT = path.resolve(__dirname, path.join('dist', 'index.d.ts'));
+const LIB_TSCONFIG: string = path.resolve(__dirname, 'tsconfig.lib.json');
+const MERGED_TYPINGS_INPUT: string = path.resolve(__dirname, path.join('dist', 'esm', 'types', 'index.d.ts'));
+const MERGED_TYPINGS_OUTPUT: string = path.resolve(__dirname, path.join('dist', 'index.d.ts'));
 
-module.exports = [
+const rollupConfig: RollupOptions[] = [
   {
     cache: false,
     input: path.join(__dirname, 'src', 'index.ts'),
@@ -67,6 +71,8 @@ module.exports = [
     external: [/\.s?css$/],
     input: MERGED_TYPINGS_INPUT,
     output: [{file: MERGED_TYPINGS_OUTPUT, format: 'esm'}],
-    plugins: [dts.default()],
+    plugins: [dts()],
   },
 ];
+
+export default rollupConfig;
