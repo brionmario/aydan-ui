@@ -22,9 +22,29 @@
  * SOFTWARE.
  */
 
-import clsx, {type ClassValue} from 'clsx';
+import clsx from 'clsx';
 import {twMerge} from 'tailwind-merge';
+import cn from '../cn';
 
-const cn = (...inputs: ClassValue[]): string => twMerge(clsx(inputs));
+jest.mock('clsx');
+jest.mock('tailwind-merge');
 
-export default cn;
+describe('cn', () => {
+  it('should correctly merge class values and return a string', () => {
+    const mockClsx: jest.MockedFunction<typeof clsx> = clsx as jest.MockedFunction<typeof clsx>;
+    const mockTwMerge: jest.MockedFunction<typeof twMerge> = twMerge as jest.MockedFunction<typeof twMerge>;
+
+    const classValues: string[] = ['class1', 'class2', 'class3'];
+    const clsxResult: string = 'class1 class2 class3';
+    const twMergeResult: string = 'class1 class2 class3';
+
+    mockClsx.mockReturnValue(clsxResult);
+    mockTwMerge.mockReturnValue(twMergeResult);
+
+    const result: string = cn(...classValues);
+
+    expect(mockClsx).toHaveBeenCalledWith(classValues);
+    expect(mockTwMerge).toHaveBeenCalledWith(clsxResult);
+    expect(result).toBe(twMergeResult);
+  });
+});
