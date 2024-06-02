@@ -16,5 +16,5 @@
     "**/*.test.jsx"
   ],
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.js", "src/**/*.ts", "src/defaultTheme.ts"]
+  "include": ["src/**/*.js", "src/**/*.ts"]
 }

@@ -22,4 +22,8 @@
  * SOFTWARE.
  */
 
+// FILE LEVEL ESLINT SUPPRESSIONS:
+// This is the Public API and should have both named and default exports.
+/* eslint-disable import/prefer-default-export */
+
 export {default as cn} from './cn';

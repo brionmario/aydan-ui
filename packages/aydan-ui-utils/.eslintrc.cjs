@@ -31,9 +31,9 @@ module.exports = {
   },
   extends: [
     'plugin:@brionmario/typescript',
+    'plugin:@brionmario/jest',
     'plugin:@brionmario/strict',
     'plugin:@brionmario/internal',
-    'plugin:@brionmario/jest',
     'plugin:@brionmario/prettier',
   ],
   parserOptions: {
@@ -41,5 +41,4 @@ module.exports = {
     project: [path.resolve(__dirname, 'tsconfig.eslint.json')],
   },
   plugins: ['@brionmario'],
-  rules: {},
 };
