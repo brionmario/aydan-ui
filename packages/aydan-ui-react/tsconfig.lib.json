@@ -3,9 +3,7 @@
     "declaration": true,
     "declarationDir": "types",
     "outDir": "dist",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
   "exclude": [
     "**/*.spec.ts",
@@ -18,9 +16,5 @@
     "**/*.test.jsx"
   ],
   "extends": "./tsconfig.json",
-  "include": [
-    "src/**/*.js",
-    "src/**/*.ts",
-    "src/defaultTheme.ts"
-  ]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }

@@ -22,4 +22,8 @@
  * SOFTWARE.
  */
 
-export * from './public-api';
+// FILE LEVEL ESLINT SUPPRESSIONS:
+// This is the Public API and should have both named and default exports.
+/* eslint-disable import/prefer-default-export */
+
+export * from './components/public-api';

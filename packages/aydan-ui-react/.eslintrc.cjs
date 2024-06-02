@@ -31,16 +31,20 @@ module.exports = {
   },
   extends: [
     'plugin:@brionmario/typescript',
+    'plugin:@brionmario/react',
     'plugin:@brionmario/strict',
     'plugin:@brionmario/internal',
     'plugin:@brionmario/jest',
     'plugin:@brionmario/prettier',
-    'plugin:@brionmario/react',
+    'plugin:react/jsx-runtime',
   ],
   parserOptions: {
     ecmaVersion: 2018,
-    project: [path.resolve(__dirname, 'tsconfig.eslint.json')],
+    project: [
+      path.resolve(__dirname, 'tsconfig.lib.json'),
+      path.resolve(__dirname, 'tsconfig.spec.json'),
+      path.resolve(__dirname, 'tsconfig.eslint.json'),
+    ],
   },
   plugins: ['@brionmario'],
-  rules: {},
 };

@@ -7,13 +7,9 @@
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "jsx": "react-jsx",
-    "lib": [
-      "ESNext",
-      "dom"
-    ],
+    "lib": ["ESNext", "dom"],
     "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -27,11 +23,7 @@
     "strict": true,
     "target": "es2015"
   },
-  "exclude": [
-    "node_modules",
-    "tmp",
-    "dist"
-  ],
+  "exclude": ["node_modules", "tmp", "dist"],
   "files": [],
   "include": [],
   "references": [

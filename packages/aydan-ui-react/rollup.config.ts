@@ -22,24 +22,31 @@
  * SOFTWARE.
  */
 
-const commonjs = require('@rollup/plugin-commonjs');
-const resolve = require('@rollup/plugin-node-resolve');
-const typescript = require('@rollup/plugin-typescript');
-const dts = require('rollup-plugin-dts');
-const peerDepsExternal = require('rollup-plugin-peer-deps-external');
-const {terser} = require('rollup-plugin-terser');
-const path = require('path');
+// FILE LEVEL ESLINT SUPPRESSIONS:
+// Rollup throws the following error when the const declarations have a type definition.
+// 'const' declarations must be initialized (Note that you need plugins to import files that are not JavaScript)
+/* eslint-disable @typescript-eslint/typedef */
 
-const pkg = require('./package.json');
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import dts from 'rollup-plugin-dts';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import {terser} from 'rollup-plugin-terser';
+import path from 'path';
+import {fileURLToPath} from 'url';
+import pkg from './package.json' assert {type: 'json'};
+
+// eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const LIB_TSCONFIG = path.resolve(__dirname, 'tsconfig.lib.json');
-const MERGED_TYPINGS_INPUT = path.resolve(__dirname, path.join('dist', 'esm', 'types', 'index.d.ts'));
-const MERGED_TYPINGS_OUTPUT = path.resolve(__dirname, path.join('dist', 'index.d.ts'));
+const MERGED_TYPINGS_INPUT = path.resolve(__dirname, 'dist/esm/types/index.d.ts');
+const MERGED_TYPINGS_OUTPUT = path.resolve(__dirname, 'dist/index.d.ts');
 
-module.exports = [
+const rollupConfig = [
   {
     cache: false,
-    external: ['react', 'react-dom'],
     input: path.join(__dirname, 'src', 'index.ts'),
     output: [
       {
@@ -57,7 +64,6 @@ module.exports = [
       peerDepsExternal(),
       resolve({
         exportConditions: ['node'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }),
       commonjs(),
       typescript({tsconfig: LIB_TSCONFIG}),
@@ -69,6 +75,8 @@ module.exports = [
     external: [/\.s?css$/],
     input: MERGED_TYPINGS_INPUT,
     output: [{file: MERGED_TYPINGS_OUTPUT, format: 'esm'}],
-    plugins: [dts.default()],
+    plugins: [dts()],
   },
 ];
+
+export default rollupConfig;
