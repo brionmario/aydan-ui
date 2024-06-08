@@ -35,6 +35,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import terser from '@rollup/plugin-terser';
 import path from 'path';
 import {fileURLToPath} from 'url';
+import preserveDirectives from 'rollup-plugin-preserve-directives';
 import pkg from './package.json' assert {type: 'json'};
 
 // eslint-disable-next-line @typescript-eslint/naming-convention, no-underscore-dangle
@@ -50,6 +51,7 @@ const rollupConfig = [
     input: path.join(__dirname, 'src', 'index.ts'),
     output: [
       {
+        exports: 'named',
         file: pkg.main,
         format: 'cjs',
         sourcemap: true,
@@ -64,10 +66,16 @@ const rollupConfig = [
       peerDepsExternal(),
       resolve({
         exportConditions: ['node'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }),
       commonjs(),
       typescript({tsconfig: LIB_TSCONFIG}),
-      terser(),
+      terser({
+        compress: {
+          directives: false, // Stop terser from removing directives like 'use client'.
+        },
+      }),
+      preserveDirectives(),
     ],
   },
   {
