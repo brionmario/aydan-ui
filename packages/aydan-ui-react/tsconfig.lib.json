@@ -7,8 +7,14 @@
   },
   "exclude": [
     "**/__tests__",
-    "**/*.test.{ts,tsx,js,jsx}",
-    "**/*.spec.{ts,tsx,js,jsx}"
+    "**/*.test.js",
+    "**/*.test.jsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.js",
+    "**/*.spec.jsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
   ],
   "extends": "./tsconfig.json",
   "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]

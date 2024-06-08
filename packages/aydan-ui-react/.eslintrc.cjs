@@ -30,8 +30,8 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:@brionmario/typescript',
     'plugin:@brionmario/react',
+    'plugin:@brionmario/typescript',
     'plugin:@brionmario/strict',
     'plugin:@brionmario/internal',
     'plugin:@brionmario/jest',

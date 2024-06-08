@@ -25,20 +25,29 @@
 import type {Config} from '@jest/types';
 
 const jestConfig: Config.InitialOptions = {
+  displayName: '@aydan-ui/themes',
   extensionsToTreatAsEsm: ['.ts'],
-  moduleNameMapper: {},
+  moduleDirectories: ['node_modules', 'test-configs', __dirname],
+  moduleFileExtensions: ['js', 'ts', 'json', 'node'],
+  moduleNameMapper: {
+    '^@unit-testing(.*)$': '<rootDir>/test-configs/utils',
+  },
+  modulePaths: ['<rootDir>'],
   preset: 'ts-jest',
-  setupFiles: ['<rootDir>/test-configs/setup-test.ts'],
+  setupFilesAfterEnv: ['<rootDir>/test-configs/setup-test.ts'],
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['/node_modules/'],
+  testMatch: ['<rootDir>/**/?(*.)test.{ts,js}'],
+  testPathIgnorePatterns: ['<rootDir>/(dist|node_modules)/'],
   transform: {
-    '^.+\\.tsx?$': [
+    '^.+\\.ts?$': [
       'ts-jest',
       {
         useESM: true,
       },
     ],
   },
+  transformIgnorePatterns: [],
+  verbose: true,
 };
 
 export default jestConfig;
