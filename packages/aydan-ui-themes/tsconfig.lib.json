@@ -1,12 +1,9 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "outDir": "dist",
     "declarationDir": "types",
-    "types": [
-      "node"
-    ]
+    "outDir": "dist",
+    "types": ["node"]
   },
   "exclude": [
     "**/*.spec.ts",
@@ -18,8 +15,6 @@
     "**/*.spec.jsx",
     "**/*.test.jsx"
   ],
-  "include": [
-    "src/**/*.js",
-    "src/**/*.ts"
-  ]
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*.js", "src/**/*.ts"]
 }
