@@ -22,4 +22,25 @@
  * SOFTWARE.
  */
 
-export * from './public-api';
+/**
+ * Represents the color scheme of the application.
+ *
+ * @remarks
+ * This type is used to define the color scheme of the application. It can be 'light', 'dark', or 'system'.
+ *
+ * 'light': Represents a light color scheme, typically with light backgrounds and dark text.
+ *
+ * 'dark': Represents a dark color scheme, typically with dark backgrounds and light text.
+ *
+ * 'system': Represents the system's default color scheme. The actual appearance will depend on the system settings.
+ *
+ * @example
+ * ```typescript
+ * const scheme: ColorScheme = 'light';
+ * ```
+ *
+ * @defaultValue 'light'
+ */
+type ColorScheme = 'light' | 'dark' | 'system';
+
+export default ColorScheme;

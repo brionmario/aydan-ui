@@ -22,4 +22,23 @@
  * SOFTWARE.
  */
 
-export * from './public-api';
+/**
+ * Enum for the set of supported themes.
+ *
+ * @remarks
+ * `default`: Represents the default theme.
+ * `new-york`: Represents the New York style custom theme.
+ *
+ * @example
+ * ```typescript
+ * const theme: SupportedThemes = SupportedThemes.DEFAULT;
+ * ```
+ *
+ * @defaultValue 'default'
+ */
+enum SupportedThemes {
+  DEFAULT = 'default',
+  NEW_YORK = 'new-york',
+}
+
+export default SupportedThemes;

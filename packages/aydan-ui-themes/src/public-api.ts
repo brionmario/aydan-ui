@@ -22,4 +22,5 @@
  * SOFTWARE.
  */
 
-export * from './public-api';
+export {default as SupportedThemes} from './theme/supported-themes';
+export {default as ColorScheme} from './theme/color-scheme';
