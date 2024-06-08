@@ -5,16 +5,7 @@
     "outDir": "dist",
     "types": ["node"]
   },
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "**/*.spec.tsx",
-    "**/*.test.tsx",
-    "**/*.spec.js",
-    "**/*.test.js",
-    "**/*.spec.jsx",
-    "**/*.test.jsx"
-  ],
+  "exclude": ["**/__tests__", "**/*.test.{ts,js}", "**/*.spec.{ts,js}"],
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.js", "src/**/*.ts"]
+  "include": ["src/**/*.{js,ts}"]
 }
