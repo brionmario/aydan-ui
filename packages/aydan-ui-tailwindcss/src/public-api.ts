@@ -22,32 +22,9 @@
  * SOFTWARE.
  */
 
-import type {Config} from '@jest/types';
+// FILE LEVEL ESLINT SUPPRESSIONS:
+// This is the Public API and should have both named and default exports.
+/* eslint-disable import/prefer-default-export */
 
-const jestConfig: Config.InitialOptions = {
-  displayName: '@aydan-ui/tailwind',
-  extensionsToTreatAsEsm: ['.ts'],
-  moduleDirectories: ['node_modules', 'test-configs', __dirname],
-  moduleFileExtensions: ['js', 'ts', 'json', 'node'],
-  moduleNameMapper: {
-    '^@unit-testing(.*)$': '<rootDir>/test-configs/utils',
-  },
-  modulePaths: ['<rootDir>'],
-  preset: 'ts-jest',
-  setupFilesAfterEnv: ['<rootDir>/test-configs/setup-test.ts'],
-  testEnvironment: 'node',
-  testMatch: ['<rootDir>/**/?(*.)test.{ts,js}'],
-  testPathIgnorePatterns: ['<rootDir>/(dist|node_modules)/'],
-  transform: {
-    '^.+\\.ts?$': [
-      'ts-jest',
-      {
-        useESM: true,
-      },
-    ],
-  },
-  transformIgnorePatterns: [],
-  verbose: true,
-};
-
-export default jestConfig;
+export {default} from './plugin';
+export {default as plugin} from './plugin';
