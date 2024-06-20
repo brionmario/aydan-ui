@@ -23,22 +23,20 @@
  */
 
 /**
- * Enum for the set of supported themes.
+ * A style comes with its own set of components, animations, icons and more.
  *
  * @remarks
- * `default`: Represents the default theme.
- * `new-york`: Represents the New York style custom theme.
+ * `Default`: Has larger inputs, uses lucide-react for icons and tailwindcss-animate for animations.
+ *
+ * `New York`: Ships with smaller buttons and cards with shadows. It uses icons from Radix Icons.
  *
  * @example
  * ```typescript
- * const theme: SupportedThemes = SupportedThemes.DEFAULT;
+ * const style: Style = 'default';
  * ```
  *
  * @defaultValue 'default'
  */
-enum SupportedThemes {
-  DEFAULT = 'default',
-  NEW_YORK = 'new-york',
-}
+type Style = 'default' | 'new-york';
 
-export default SupportedThemes;
+export default Style;

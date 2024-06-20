@@ -22,5 +22,5 @@
  * SOFTWARE.
  */
 
-export {default as SupportedThemes} from './theme/supported-themes';
+export {default as Style} from './theme/style';
 export {default as ColorScheme} from './theme/color-scheme';
