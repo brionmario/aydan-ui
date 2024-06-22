@@ -29,7 +29,7 @@ import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {ChevronDown} from 'lucide-react';
 import {cn} from '@aydan-ui/utils';
 
-type AccordionTriggerProps = ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>;
+export type AccordionTriggerProps = ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>;
 
 const AccordionTrigger: FC<AccordionTriggerProps> = forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
@@ -52,5 +52,4 @@ const AccordionTrigger: FC<AccordionTriggerProps> = forwardRef<
 
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
-export type {AccordionTriggerProps};
 export default AccordionTrigger;

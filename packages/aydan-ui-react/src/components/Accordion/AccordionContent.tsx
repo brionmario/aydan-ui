@@ -28,7 +28,7 @@ import {ComponentPropsWithoutRef, ElementRef, FC, ForwardedRef, forwardRef} from
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {cn} from '@aydan-ui/utils';
 
-type AccordionContentProps = ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>;
+export type AccordionContentProps = ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>;
 
 const AccordionContent: FC<AccordionContentProps> = forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
@@ -45,5 +45,4 @@ const AccordionContent: FC<AccordionContentProps> = forwardRef<
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
-export type {AccordionContentProps};
 export default AccordionContent;

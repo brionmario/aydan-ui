@@ -26,9 +26,8 @@
 
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
-type AccordionProps = typeof AccordionPrimitive.Root;
+export type AccordionProps = typeof AccordionPrimitive.Root;
 
 const Accordion: AccordionProps = AccordionPrimitive.Root;
 
-export type {AccordionProps};
 export default Accordion;
