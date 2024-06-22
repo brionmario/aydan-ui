@@ -36,7 +36,6 @@ export type Plugin = {
 
 const plugin: Plugin = tailwindPlugin(
   ({addBase, theme}: PluginAPI) => {
-    // Adding base styles
     addBase({
       ':root': {
         '--border': theme('colors.border'),
@@ -63,7 +62,6 @@ const plugin: Plugin = tailwindPlugin(
       },
     });
 
-    // Adding custom keyframes
     addBase({
       '@keyframes accordion-down': {
         from: {height: '0'},
