@@ -27,21 +27,30 @@
 import {ComponentPropsWithoutRef, ElementRef, FC, ForwardedRef, forwardRef} from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import {cn} from '@aydan-ui/utils';
+import useTheme from '../../theme/use-theme';
 
 export type AccordionContentProps = ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>;
 
 const AccordionContent: FC<AccordionContentProps> = forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({className, children, ...props}: AccordionContentProps, ref: ForwardedRef<HTMLDivElement>) => (
-  <AccordionPrimitive.Content
-    ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-    {...props}
-  >
-    <div className={cn('pb-4 pt-0', className)}>{children}</div>
-  </AccordionPrimitive.Content>
-));
+>(({className, children, ...props}: AccordionContentProps, ref: ForwardedRef<HTMLDivElement>) => {
+  const {style} = useTheme();
+
+  return (
+    <AccordionPrimitive.Content
+      ref={ref}
+      className={cn(
+        'overflow-hidden text-sm',
+        style === 'default' && 'transition-all',
+        'data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+      )}
+      {...props}
+    >
+      <div className={cn('pb-4 pt-0', className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  );
+});
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 

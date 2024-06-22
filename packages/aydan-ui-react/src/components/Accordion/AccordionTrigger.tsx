@@ -24,31 +24,57 @@
 
 'use client';
 
-import {ComponentPropsWithoutRef, ElementRef, FC, ForwardedRef, forwardRef} from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  FC,
+  ForwardRefExoticComponent,
+  ForwardedRef,
+  RefAttributes,
+  forwardRef,
+} from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import {ChevronDown} from 'lucide-react';
+import {ChevronDown, LucideIcon} from 'lucide-react';
+import {ChevronDownIcon} from '@radix-ui/react-icons';
 import {cn} from '@aydan-ui/utils';
+import {IconProps} from '@radix-ui/react-icons/dist/types';
+import useTheme from '../../theme/use-theme';
 
 export type AccordionTriggerProps = ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>;
 
 const AccordionTrigger: FC<AccordionTriggerProps> = forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
->(({className, children, ...props}: AccordionTriggerProps, ref: ForwardedRef<HTMLButtonElement>) => (
-  <AccordionPrimitive.Header className="flex">
-    <AccordionPrimitive.Trigger
-      ref={ref}
-      className={cn(
-        'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
-        className,
-      )}
-      {...props}
-    >
-      {children}
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
+>(({className, children, ...props}: AccordionTriggerProps, ref: ForwardedRef<HTMLButtonElement>) => {
+  const {style} = useTheme();
+
+  const Chevron: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>> | LucideIcon =
+    style === 'new-york' ? ChevronDownIcon : ChevronDown;
+
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          'flex flex-1 items-center justify-between py-4',
+          style === 'new-york' && 'text-sm',
+          'font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
+          className,
+        )}
+        {...props}
+      >
+        {children}
+        <Chevron
+          className={cn(
+            'h-4 w-4 shrink-0',
+            style === 'new-york' && 'text-muted-foreground',
+            'transition-transform duration-200',
+          )}
+        />
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+});
 
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
