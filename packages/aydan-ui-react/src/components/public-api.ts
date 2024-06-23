@@ -79,6 +79,15 @@ export * from './AlertDialog/AlertDialogTrigger';
 export {default as AspectRatio} from './AspectRatio/AspectRatio';
 export * from './AspectRatio/AspectRatio';
 
+export {default as Avatar} from './Avatar/Avatar';
+export * from './Avatar/Avatar';
+
+export {default as AvatarFallback} from './Avatar/AvatarFallback';
+export * from './Avatar/AvatarFallback';
+
+export {default as AvatarImage} from './Avatar/AvatarImage';
+export * from './Avatar/AvatarImage';
+
 export {default as Button} from './Button/Button';
 export * from './Button/Button';
 export {default as useButtonVariants} from './Button/use-button-variants';
