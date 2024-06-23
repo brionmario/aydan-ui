@@ -22,23 +22,19 @@
  * SOFTWARE.
  */
 
-export {default as Accordion} from './Accordion/Accordion';
-export * from './Accordion/Accordion';
+import {cn} from '@aydan-ui/utils';
+import {FC, ForwardedRef, HTMLAttributes, forwardRef} from 'react';
 
-export {default as AccordionContent} from './Accordion/AccordionContent';
-export * from './Accordion/AccordionContent';
+export type AlertTitleProps = HTMLAttributes<HTMLHeadingElement>;
 
-export {default as AccordionItem} from './Accordion/AccordionItem';
-export * from './Accordion/AccordionItem';
+const AlertTitle: FC<AlertTitleProps> = forwardRef<HTMLParagraphElement, AlertTitleProps>(
+  ({className, children, ...props}: AlertTitleProps, ref: ForwardedRef<HTMLParagraphElement>) => (
+    <h5 ref={ref} className={cn('mb-1 font-medium leading-none tracking-tight', className)} {...props}>
+      {children}
+    </h5>
+  ),
+);
 
-export {default as AccordionTrigger} from './Accordion/AccordionTrigger';
-export * from './Accordion/AccordionTrigger';
+AlertTitle.displayName = 'AlertTitle';
 
-export {default as Alert} from './Alert/Alert';
-export * from './Alert/Alert';
-
-export {default as AlertDescription} from './Alert/AlertDescription';
-export * from './Alert/AlertDescription';
-
-export {default as AlertTitle} from './Alert/AlertTitle';
-export * from './Alert/AlertTitle';
+export default AlertTitle;
