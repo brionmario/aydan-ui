@@ -24,7 +24,7 @@
   "main": "dist/esm/index.js",
   "commonjs": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin typescript",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
