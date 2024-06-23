@@ -76,6 +76,9 @@ export * from './AlertDialog/AlertDialogTitle';
 export {default as AlertDialogTrigger} from './AlertDialog/AlertDialogTrigger';
 export * from './AlertDialog/AlertDialogTrigger';
 
+export {default as AspectRatio} from './AspectRatio/AspectRatio';
+export * from './AspectRatio/AspectRatio';
+
 export {default as Button} from './Button/Button';
 export * from './Button/Button';
 export {default as useButtonVariants} from './Button/use-button-variants';
