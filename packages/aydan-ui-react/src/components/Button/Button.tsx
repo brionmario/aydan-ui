@@ -22,28 +22,26 @@
  * SOFTWARE.
  */
 
-export {default as Accordion} from './Accordion/Accordion';
-export * from './Accordion/Accordion';
+import {Slot, SlotProps} from '@radix-ui/react-slot';
+import {type VariantProps} from 'class-variance-authority';
+import {cn} from '@aydan-ui/utils';
+import {ButtonHTMLAttributes, ForwardRefExoticComponent, ForwardedRef, RefAttributes, forwardRef} from 'react';
+import useButtonVariants, {type ButtonVariants} from './use-button-variants';
 
-export {default as AccordionContent} from './Accordion/AccordionContent';
-export * from './Accordion/AccordionContent';
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<ButtonVariants> {
+  asChild?: boolean;
+}
 
-export {default as AccordionItem} from './Accordion/AccordionItem';
-export * from './Accordion/AccordionItem';
+const Button: ForwardRefExoticComponent<ButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef<
+  HTMLButtonElement,
+  ButtonProps
+>(({className, variant, size, asChild = false, ...props}: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+  const Comp: ForwardRefExoticComponent<SlotProps & RefAttributes<HTMLElement>> | 'button' = asChild ? Slot : 'button';
+  const buttonVariants: ButtonVariants = useButtonVariants();
 
-export {default as AccordionTrigger} from './Accordion/AccordionTrigger';
-export * from './Accordion/AccordionTrigger';
+  return <Comp className={cn(buttonVariants({className, size, variant}))} ref={ref} {...props} />;
+});
 
-export {default as Alert} from './Alert/Alert';
-export * from './Alert/Alert';
+Button.displayName = 'Button';
 
-export {default as AlertDescription} from './Alert/AlertDescription';
-export * from './Alert/AlertDescription';
-
-export {default as AlertTitle} from './Alert/AlertTitle';
-export * from './Alert/AlertTitle';
-
-export {default as Button} from './Button/Button';
-export * from './Button/Button';
-export {default as useButtonVariants} from './Button/use-button-variants';
-export * from './Button/use-button-variants';
+export default Button;
