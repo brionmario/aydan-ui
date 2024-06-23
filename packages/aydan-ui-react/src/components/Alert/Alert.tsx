@@ -22,40 +22,16 @@
  * SOFTWARE.
  */
 
-import {cva, type VariantProps} from 'class-variance-authority';
+import {type VariantProps} from 'class-variance-authority';
 import {cn} from '@aydan-ui/utils';
 import {FC, ForwardedRef, HTMLAttributes, PropsWithChildren, forwardRef} from 'react';
-import {ClassProp} from 'class-variance-authority/dist/types';
-import useTheme from '../../theme/use-theme';
+import useAlertVariants, {type AlertVariants} from './use-alert-variants';
 
-type AlertVariants = (props?: (Record<string, unknown> & ClassProp) | undefined) => string;
 export type AlertProps = PropsWithChildren<HTMLAttributes<HTMLDivElement> & VariantProps<AlertVariants>>;
 
 const Alert: FC<AlertProps> = forwardRef<HTMLDivElement, AlertProps>(
   ({className, variant, ...props}: AlertProps, ref: ForwardedRef<HTMLDivElement>) => {
-    const {style} = useTheme();
-
-    const alertVariants: AlertVariants = cva(
-      cn(
-        'relative w-full rounded-lg border',
-        style === 'default' && 'p-4 [&>svg~*]:pl-7',
-        style === 'new-york' && 'px-4 py-3 text-sm',
-        'px-4 py-3 text-sm [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4',
-        style === 'default' && '[&>svg]:text-foreground',
-        style === 'new-york' && '[&>svg]:text-foreground [&>svg~*]:pl-7',
-      ),
-      {
-        defaultVariants: {
-          variant: 'default',
-        },
-        variants: {
-          variant: {
-            default: 'bg-background text-foreground',
-            destructive: 'border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive',
-          },
-        },
-      },
-    );
+    const alertVariants: AlertVariants = useAlertVariants();
 
     return <div ref={ref} role="alert" className={cn(alertVariants({variant}), className)} {...props} />;
   },
