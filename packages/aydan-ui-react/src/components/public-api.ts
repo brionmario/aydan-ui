@@ -43,6 +43,9 @@ export * from './Alert/AlertDescription';
 export {default as AlertTitle} from './Alert/AlertTitle';
 export * from './Alert/AlertTitle';
 
+export {default as useAlertVariants} from './Alert/use-alert-variants';
+export * from './Alert/use-alert-variants';
+
 export {default as AlertDialog} from './AlertDialog/AlertDialog';
 export * from './AlertDialog/AlertDialog';
 
@@ -90,5 +93,6 @@ export * from './Avatar/AvatarImage';
 
 export {default as Button} from './Button/Button';
 export * from './Button/Button';
+
 export {default as useButtonVariants} from './Button/use-button-variants';
 export * from './Button/use-button-variants';
