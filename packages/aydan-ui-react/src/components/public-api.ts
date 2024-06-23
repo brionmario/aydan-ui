@@ -43,6 +43,39 @@ export * from './Alert/AlertDescription';
 export {default as AlertTitle} from './Alert/AlertTitle';
 export * from './Alert/AlertTitle';
 
+export {default as AlertDialog} from './AlertDialog/AlertDialog';
+export * from './AlertDialog/AlertDialog';
+
+export {default as AlertDialogAction} from './AlertDialog/AlertDialogAction';
+export * from './AlertDialog/AlertDialogAction';
+
+export {default as AlertDialogCancel} from './AlertDialog/AlertDialogCancel';
+export * from './AlertDialog/AlertDialogCancel';
+
+export {default as AlertDialogContent} from './AlertDialog/AlertDialogContent';
+export * from './AlertDialog/AlertDialogContent';
+
+export {default as AlertDialogDescription} from './AlertDialog/AlertDialogDescription';
+export * from './AlertDialog/AlertDialogDescription';
+
+export {default as AlertDialogFooter} from './AlertDialog/AlertDialogFooter';
+export * from './AlertDialog/AlertDialogFooter';
+
+export {default as AlertDialogHeader} from './AlertDialog/AlertDialogHeader';
+export * from './AlertDialog/AlertDialogHeader';
+
+export {default as AlertDialogOverlay} from './AlertDialog/AlertDialogOverlay';
+export * from './AlertDialog/AlertDialogOverlay';
+
+export {default as AlertDialogPortal} from './AlertDialog/AlertDialogPortal';
+export * from './AlertDialog/AlertDialogPortal';
+
+export {default as AlertDialogTitle} from './AlertDialog/AlertDialogTitle';
+export * from './AlertDialog/AlertDialogTitle';
+
+export {default as AlertDialogTrigger} from './AlertDialog/AlertDialogTrigger';
+export * from './AlertDialog/AlertDialogTrigger';
+
 export {default as Button} from './Button/Button';
 export * from './Button/Button';
 export {default as useButtonVariants} from './Button/use-button-variants';
