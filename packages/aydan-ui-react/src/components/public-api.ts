@@ -91,6 +91,9 @@ export * from './Avatar/AvatarFallback';
 export {default as AvatarImage} from './Avatar/AvatarImage';
 export * from './Avatar/AvatarImage';
 
+export {default as Badge} from './Badge/Badge';
+export * from './Badge/Badge';
+
 export {default as Button} from './Button/Button';
 export * from './Button/Button';
 
