@@ -171,6 +171,33 @@ export * from './Collapsible/CollapsibleContent';
 export {default as CollapsibleTrigger} from './Collapsible/CollapsibleTrigger';
 export * from './Collapsible/CollapsibleTrigger';
 
+export {default as Command} from './Command/Command';
+export * from './Command/Command';
+
+export {default as CommandDialog} from './Command/CommandDialog';
+export * from './Command/CommandDialog';
+
+export {default as CommandEmpty} from './Command/CommandEmpty';
+export * from './Command/CommandEmpty';
+
+export {default as CommandGroup} from './Command/CommandGroup';
+export * from './Command/CommandGroup';
+
+export {default as CommandInput} from './Command/CommandInput';
+export * from './Command/CommandInput';
+
+export {default as CommandItem} from './Command/CommandItem';
+export * from './Command/CommandItem';
+
+export {default as CommandList} from './Command/CommandList';
+export * from './Command/CommandList';
+
+export {default as CommandSeparator} from './Command/CommandSeparator';
+export * from './Command/CommandSeparator';
+
+export {default as CommandShortcut} from './Command/CommandShortcut';
+export * from './Command/CommandShortcut';
+
 export {default as Dialog} from './Dialog/Dialog';
 export * from './Dialog/Dialog';
 
