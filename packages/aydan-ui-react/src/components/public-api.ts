@@ -123,3 +123,21 @@ export * from './Button/use-button-variants';
 
 export {default as Calendar} from './Calander/Calander';
 export * from './Calander/Calander';
+
+export {default as Card} from './Card/Card';
+export * from './Card/Card';
+
+export {default as CardContent} from './Card/CardContent';
+export * from './Card/CardContent';
+
+export {default as CardDescription} from './Card/CardDescription';
+export * from './Card/CardDescription';
+
+export {default as CardFooter} from './Card/CardFooter';
+export * from './Card/CardFooter';
+
+export {default as CardHeader} from './Card/CardHeader';
+export * from './Card/CardHeader';
+
+export {default as CardTitle} from './Card/CardTitle';
+export * from './Card/CardTitle';
