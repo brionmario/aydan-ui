@@ -158,3 +158,6 @@ export {default as CarouselPrevious} from './Carousel/CarouselPrevious';
 export * from './Carousel/CarouselPrevious';
 
 export {default as useCarousel} from './Carousel/useCarousel';
+
+export {default as Checkbox} from './Checkbox/Checkbox';
+export * from './Checkbox/Checkbox';
