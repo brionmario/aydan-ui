@@ -141,3 +141,20 @@ export * from './Card/CardHeader';
 
 export {default as CardTitle} from './Card/CardTitle';
 export * from './Card/CardTitle';
+
+export {default as Carousel} from './Carousel/Carousel';
+export * from './Carousel/Carousel';
+
+export {default as CarouselContent} from './Carousel/CarouselContent';
+export * from './Carousel/CarouselContent';
+
+export {default as CarouselItem} from './Carousel/CarouselItem';
+export * from './Carousel/CarouselItem';
+
+export {default as CarouselNext} from './Carousel/CarouselNext';
+export * from './Carousel/CarouselNext';
+
+export {default as CarouselPrevious} from './Carousel/CarouselPrevious';
+export * from './Carousel/CarouselPrevious';
+
+export {default as useCarousel} from './Carousel/useCarousel';
