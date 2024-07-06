@@ -161,3 +161,12 @@ export {default as useCarousel} from './Carousel/useCarousel';
 
 export {default as Checkbox} from './Checkbox/Checkbox';
 export * from './Checkbox/Checkbox';
+
+export {default as Collapsible} from './Collapsible/Collapsible';
+export * from './Collapsible/Collapsible';
+
+export {default as CollapsibleContent} from './Collapsible/CollapsibleContent';
+export * from './Collapsible/CollapsibleContent';
+
+export {default as CollapsibleTrigger} from './Collapsible/CollapsibleTrigger';
+export * from './Collapsible/CollapsibleTrigger';
