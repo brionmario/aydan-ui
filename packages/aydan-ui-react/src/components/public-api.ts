@@ -94,6 +94,27 @@ export * from './Avatar/AvatarImage';
 export {default as Badge} from './Badge/Badge';
 export * from './Badge/Badge';
 
+export {default as Breadcrumb} from './Breadcrumb/Breadcrumb';
+export * from './Breadcrumb/Breadcrumb';
+
+export {default as BreadcrumbEllipsis} from './Breadcrumb/BreadcrumbEllipsis';
+export * from './Breadcrumb/BreadcrumbEllipsis';
+
+export {default as BreadcrumbItem} from './Breadcrumb/BreadcrumbItem';
+export * from './Breadcrumb/BreadcrumbItem';
+
+export {default as BreadcrumbLink} from './Breadcrumb/BreadcrumbLink';
+export * from './Breadcrumb/BreadcrumbLink';
+
+export {default as BreadcrumbList} from './Breadcrumb/BreadcrumbList';
+export * from './Breadcrumb/BreadcrumbList';
+
+export {default as BreadcrumbPage} from './Breadcrumb/BreadcrumbPage';
+export * from './Breadcrumb/BreadcrumbPage';
+
+export {default as BreadcrumbSeparator} from './Breadcrumb/BreadcrumbSeparator';
+export * from './Breadcrumb/BreadcrumbSeparator';
+
 export {default as Button} from './Button/Button';
 export * from './Button/Button';
 
