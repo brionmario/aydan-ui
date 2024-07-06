@@ -170,3 +170,33 @@ export * from './Collapsible/CollapsibleContent';
 
 export {default as CollapsibleTrigger} from './Collapsible/CollapsibleTrigger';
 export * from './Collapsible/CollapsibleTrigger';
+
+export {default as Dialog} from './Dialog/Dialog';
+export * from './Dialog/Dialog';
+
+export {default as DialogClose} from './Dialog/DialogClose';
+export * from './Dialog/DialogClose';
+
+export {default as DialogContent} from './Dialog/DialogContent';
+export * from './Dialog/DialogContent';
+
+export {default as DialogDescription} from './Dialog/DialogDescription';
+export * from './Dialog/DialogDescription';
+
+export {default as DialogFooter} from './Dialog/DialogFooter';
+export * from './Dialog/DialogFooter';
+
+export {default as DialogHeader} from './Dialog/DialogHeader';
+export * from './Dialog/DialogHeader';
+
+export {default as DialogOverlay} from './Dialog/DialogOverlay';
+export * from './Dialog/DialogOverlay';
+
+export {default as DialogPortal} from './Dialog/DialogPortal';
+export * from './Dialog/DialogPortal';
+
+export {default as DialogTitle} from './Dialog/DialogTitle';
+export * from './Dialog/DialogTitle';
+
+export {default as DialogTrigger} from './Dialog/DialogTrigger';
+export * from './Dialog/DialogTrigger';
