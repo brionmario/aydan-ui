@@ -272,3 +272,33 @@ export * from './Dialog/DialogTitle';
 
 export {default as DialogTrigger} from './Dialog/DialogTrigger';
 export * from './Dialog/DialogTrigger';
+
+export {default as Drawer} from './Drawer/Drawer';
+export * from './Drawer/Drawer';
+
+export {default as DrawerClose} from './Drawer/DrawerClose';
+export * from './Drawer/DrawerClose';
+
+export {default as DrawerContent} from './Drawer/DrawerContent';
+export * from './Drawer/DrawerContent';
+
+export {default as DrawerDescription} from './Drawer/DrawerDescription';
+export * from './Drawer/DrawerDescription';
+
+export {default as DrawerFooter} from './Drawer/DrawerFooter';
+export * from './Drawer/DrawerFooter';
+
+export {default as DrawerHeader} from './Drawer/DrawerHeader';
+export * from './Drawer/DrawerHeader';
+
+export {default as DrawerOverlay} from './Drawer/DrawerOverlay';
+export * from './Drawer/DrawerOverlay';
+
+export {default as DrawerPortal} from './Drawer/DrawerPortal';
+export * from './Drawer/DrawerPortal';
+
+export {default as DrawerTitle} from './Drawer/DrawerTitle';
+export * from './Drawer/DrawerTitle';
+
+export {default as DrawerTrigger} from './Drawer/DrawerTrigger';
+export * from './Drawer/DrawerTrigger';
