@@ -347,3 +347,9 @@ export * from './DropdownMenu/DropdownMenuSubTrigger';
 
 export {default as DropdownMenuTrigger} from './DropdownMenu/DropdownMenuTrigger';
 export * from './DropdownMenu/DropdownMenuTrigger';
+
+export {default as Label} from './Label/Label';
+export * from './Label/Label';
+
+export {default as useLabelVariants} from './Label/useLabelVariants';
+export * from './Label/useLabelVariants';
