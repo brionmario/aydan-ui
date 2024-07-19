@@ -387,6 +387,9 @@ export * from './HoverCard/HoverCardContent';
 export {default as HoverCardTrigger} from './HoverCard/HoverCardTrigger';
 export * from './HoverCard/HoverCardTrigger';
 
+export {default as Input} from './Input/Input';
+export * from './Input/Input';
+
 export {default as Label} from './Label/Label';
 export * from './Label/Label';
 
