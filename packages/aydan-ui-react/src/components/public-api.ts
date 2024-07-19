@@ -390,6 +390,18 @@ export * from './HoverCard/HoverCardTrigger';
 export {default as Input} from './Input/Input';
 export * from './Input/Input';
 
+export {default as InputOTP} from './InputOTP/InputOTP';
+export * from './InputOTP/InputOTP';
+
+export {default as InputOTPGroup} from './InputOTP/InputOTPGroup';
+export * from './InputOTP/InputOTPGroup';
+
+export {default as InputOTPSeparator} from './InputOTP/InputOTPSeparator';
+export * from './InputOTP/InputOTPSeparator';
+
+export {default as InputOTPSlot} from './InputOTP/InputOTPSlot';
+export * from './InputOTP/InputOTPSlot';
+
 export {default as Label} from './Label/Label';
 export * from './Label/Label';
 
