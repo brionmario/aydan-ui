@@ -378,6 +378,15 @@ export * from './Form/FormMessage';
 export {default as useFormField} from './Form/useFormField';
 export * from './Form/useFormField';
 
+export {default as HoverCard} from './HoverCard/HoverCard';
+export * from './HoverCard/HoverCard';
+
+export {default as HoverCardContent} from './HoverCard/HoverCardContent';
+export * from './HoverCard/HoverCardContent';
+
+export {default as HoverCardTrigger} from './HoverCard/HoverCardTrigger';
+export * from './HoverCard/HoverCardTrigger';
+
 export {default as Label} from './Label/Label';
 export * from './Label/Label';
 
