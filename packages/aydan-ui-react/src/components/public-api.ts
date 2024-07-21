@@ -407,3 +407,51 @@ export * from './Label/Label';
 
 export {default as useLabelVariants} from './Label/useLabelVariants';
 export * from './Label/useLabelVariants';
+
+export {default as Menubar} from './Menubar/Menubar';
+export * from './Menubar/Menubar';
+
+export {default as MenubarMenu} from './Menubar/MenubarMenu';
+export * from './Menubar/MenubarMenu';
+
+export {default as MenubarTrigger} from './Menubar/MenubarTrigger';
+export * from './Menubar/MenubarTrigger';
+
+export {default as MenubarContent} from './Menubar/MenubarContent';
+export * from './Menubar/MenubarContent';
+
+export {default as MenubarItem} from './Menubar/MenubarItem';
+export * from './Menubar/MenubarItem';
+
+export {default as MenubarSeparator} from './Menubar/MenubarSeparator';
+export * from './Menubar/MenubarSeparator';
+
+export {default as MenubarLabel} from './Menubar/MenubarLabel';
+export * from './Menubar/MenubarLabel';
+
+export {default as MenubarCheckboxItem} from './Menubar/MenubarCheckboxItem';
+export * from './Menubar/MenubarCheckboxItem';
+
+export {default as MenubarRadioGroup} from './Menubar/MenubarRadioGroup';
+export * from './Menubar/MenubarRadioGroup';
+
+export {default as MenubarRadioItem} from './Menubar/MenubarRadioItem';
+export * from './Menubar/MenubarRadioItem';
+
+export {default as MenubarPortal} from './Menubar/MenubarPortal';
+export * from './Menubar/MenubarPortal';
+
+export {default as MenubarSubContent} from './Menubar/MenubarSubContent';
+export * from './Menubar/MenubarSubContent';
+
+export {default as MenubarSubTrigger} from './Menubar/MenubarSubTrigger';
+export * from './Menubar/MenubarSubTrigger';
+
+export {default as MenubarGroup} from './Menubar/MenubarGroup';
+export * from './Menubar/MenubarGroup';
+
+export {default as MenubarSub} from './Menubar/MenubarSub';
+export * from './Menubar/MenubarSub';
+
+export {default as MenubarShortcut} from './Menubar/MenubarShortcut';
+export * from './Menubar/MenubarShortcut';
