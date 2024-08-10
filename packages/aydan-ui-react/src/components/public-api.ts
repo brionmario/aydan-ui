@@ -482,3 +482,24 @@ export * from './NavigationMenu/NavigationMenuViewport';
 
 export {default as useNavigationMenuTriggerVariants} from './NavigationMenu/useNavigationMenuTriggerVariants';
 export * from './NavigationMenu/useNavigationMenuTriggerVariants';
+
+export {default as Pagination} from './Pagination/Pagination';
+export * from './Pagination/Pagination';
+
+export {default as PaginationContent} from './Pagination/PaginationContent';
+export * from './Pagination/PaginationContent';
+
+export {default as PaginationEllipsis} from './Pagination/PaginationEllipsis';
+export * from './Pagination/PaginationEllipsis';
+
+export {default as PaginationItem} from './Pagination/PaginationItem';
+export * from './Pagination/PaginationItem';
+
+export {default as PaginationLink} from './Pagination/PaginationLink';
+export * from './Pagination/PaginationLink';
+
+export {default as PaginationNext} from './Pagination/PaginationNext';
+export * from './Pagination/PaginationNext';
+
+export {default as PaginationPrevious} from './Pagination/PaginationPrevious';
+export * from './Pagination/PaginationPrevious';
