@@ -524,3 +524,12 @@ export * from './RadioGroup/RadioGroup';
 
 export {default as RadioGroupItem} from './RadioGroup/RadioGroupItem';
 export * from './RadioGroup/RadioGroupItem';
+
+export {default as ResizableHandle} from './Resizable/ResizableHandle';
+export * from './Resizable/ResizableHandle';
+
+export {default as ResizablePanel} from './Resizable/ResizablePanel';
+export * from './Resizable/ResizablePanel';
+
+export {default as ResizablePanelGroup} from './Resizable/ResizablePanelGroup';
+export * from './Resizable/ResizablePanelGroup';
