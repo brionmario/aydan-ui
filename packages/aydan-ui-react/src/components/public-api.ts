@@ -503,3 +503,15 @@ export * from './Pagination/PaginationNext';
 
 export {default as PaginationPrevious} from './Pagination/PaginationPrevious';
 export * from './Pagination/PaginationPrevious';
+
+export {default as Popover} from './Popover/Popover';
+export * from './Popover/Popover';
+
+export {default as PopoverAnchor} from './Popover/PopoverAnchor';
+export * from './Popover/PopoverAnchor';
+
+export {default as PopoverContent} from './Popover/PopoverContent';
+export * from './Popover/PopoverContent';
+
+export {default as PopoverTrigger} from './Popover/PopoverTrigger';
+export * from './Popover/PopoverTrigger';
