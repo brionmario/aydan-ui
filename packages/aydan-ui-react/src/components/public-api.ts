@@ -533,3 +533,9 @@ export * from './Resizable/ResizablePanel';
 
 export {default as ResizablePanelGroup} from './Resizable/ResizablePanelGroup';
 export * from './Resizable/ResizablePanelGroup';
+
+export {default as ScrollArea} from './ScrollArea/ScrollArea';
+export * from './ScrollArea/ScrollArea';
+
+export {default as ScrollBar} from './ScrollArea/ScrollBar';
+export * from './ScrollArea/ScrollBar';
