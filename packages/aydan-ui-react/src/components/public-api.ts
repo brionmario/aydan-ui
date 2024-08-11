@@ -518,3 +518,9 @@ export * from './Popover/PopoverTrigger';
 
 export {default as Progress} from './Progress/Progress';
 export * from './Progress/Progress';
+
+export {default as RadioGroup} from './RadioGroup/RadioGroup';
+export * from './RadioGroup/RadioGroup';
+
+export {default as RadioGroupItem} from './RadioGroup/RadioGroupItem';
+export * from './RadioGroup/RadioGroupItem';
