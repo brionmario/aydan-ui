@@ -515,3 +515,6 @@ export * from './Popover/PopoverContent';
 
 export {default as PopoverTrigger} from './Popover/PopoverTrigger';
 export * from './Popover/PopoverTrigger';
+
+export {default as Progress} from './Progress/Progress';
+export * from './Progress/Progress';
