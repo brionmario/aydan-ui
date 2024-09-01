@@ -569,3 +569,6 @@ export * from './Select/SelectTrigger';
 
 export {default as SelectValue} from './Select/SelectValue';
 export * from './Select/SelectValue';
+
+export {default as Separator} from './Separator/Separator';
+export * from './Separator/Separator';
