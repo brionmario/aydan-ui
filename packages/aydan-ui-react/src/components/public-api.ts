@@ -539,3 +539,33 @@ export * from './ScrollArea/ScrollArea';
 
 export {default as ScrollBar} from './ScrollArea/ScrollBar';
 export * from './ScrollArea/ScrollBar';
+
+export {default as Select} from './Select/Select';
+export * from './Select/Select';
+
+export {default as SelectContent} from './Select/SelectContent';
+export * from './Select/SelectContent';
+
+export {default as SelectGroup} from './Select/SelectGroup';
+export * from './Select/SelectGroup';
+
+export {default as SelectItem} from './Select/SelectItem';
+export * from './Select/SelectItem';
+
+export {default as SelectLabel} from './Select/SelectLabel';
+export * from './Select/SelectLabel';
+
+export {default as SelectScrollDownButton} from './Select/SelectScrollDownButton';
+export * from './Select/SelectScrollDownButton';
+
+export {default as SelectScrollUpButton} from './Select/SelectScrollUpButton';
+export * from './Select/SelectScrollUpButton';
+
+export {default as SelectSeparator} from './Select/SelectSeparator';
+export * from './Select/SelectSeparator';
+
+export {default as SelectTrigger} from './Select/SelectTrigger';
+export * from './Select/SelectTrigger';
+
+export {default as SelectValue} from './Select/SelectValue';
+export * from './Select/SelectValue';
