@@ -104,9 +104,11 @@
     "embla-carousel-react": "8.0.0-rc15",
     "input-otp": "^1.2.2",
     "lucide-react": "0.359.0",
+    "next-themes": "^0.2.1",
     "react-day-picker": "^8.7.1",
     "react-hook-form": "^7.44.2",
     "react-resizable-panels": "^0.0.55",
+    "sonner": "^1.2.3",
     "vaul": "^0.9.0",
     "zod": "^3.21.4"
   }
