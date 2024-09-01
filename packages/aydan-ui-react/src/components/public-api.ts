@@ -575,3 +575,6 @@ export * from './Separator/Separator';
 
 export {default as Skeleton} from './Skeleton/Skeleton';
 export * from './Skeleton/Skeleton';
+
+export {default as Slider} from './Slider/Slider';
+export * from './Slider/Slider';
