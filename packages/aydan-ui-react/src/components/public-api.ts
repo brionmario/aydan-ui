@@ -572,3 +572,6 @@ export * from './Select/SelectValue';
 
 export {default as Separator} from './Separator/Separator';
 export * from './Separator/Separator';
+
+export {default as Skeleton} from './Skeleton/Skeleton';
+export * from './Skeleton/Skeleton';
