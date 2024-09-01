@@ -582,3 +582,6 @@ export * from './Slider/Slider';
 // For some reason, `shadcn-ui` is exporting the component as `Toaster` instead of `Sonner`.
 export {default as Toaster} from './Sonner/Sonner';
 export {SonnerProps as ToasterProps} from './Sonner/Sonner';
+
+export {default as Switch} from './Switch/Switch';
+export * from './Switch/Switch';
