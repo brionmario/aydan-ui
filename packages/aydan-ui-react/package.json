@@ -32,7 +32,7 @@
     "test": "pnpm jest --passWithNoTests"
   },
   "devDependencies": {
-    "@brionmario/eslint-plugin": "^0.3.3",
+    "@brionmario/eslint-plugin": "^0.3.4",
     "@brionmario/prettier-config": "^0.1.0",
     "@jest/globals": "^29.7.0",
     "@jest/types": "^29.6.3",
