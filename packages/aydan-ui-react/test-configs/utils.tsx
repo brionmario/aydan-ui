@@ -24,7 +24,7 @@
 
 import {RenderResult, render as rtlRender, RenderOptions} from '@testing-library/react';
 import {ComponentType, PropsWithChildren, ReactElement} from 'react';
-import ThemeProvider from '../src/theme/ThemeProvider';
+import ThemeProvider from '../src/styles/ThemeProvider';
 
 /**
  * Custom render method to includes things like global context providers, data stores, etc.

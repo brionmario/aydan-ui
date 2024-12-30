@@ -23,8 +23,8 @@
  */
 
 import {render, screen} from '../../../test-configs/utils';
-import ThemeContext from '../ThemeContext';
-import ThemeProvider from '../ThemeProvider';
+import ThemeContext from '../../theme/ThemeContext';
+import ThemeProvider from '../../theme/ThemeProvider';
 
 describe('ThemeProvider', () => {
   it('provides the default color scheme', () => {

@@ -26,7 +26,6 @@
 // This is the Public API and should have both named and default exports.
 /* eslint-disable import/prefer-default-export */
 
-export * from './components/public-api';
-export {default as ThemeContext} from './theme/ThemeContext';
-export {default as ThemeProvider} from './theme/ThemeProvider';
-export {default as useTheme} from './theme/use-theme';
+export {default as ThemeContext} from './styles/ThemeContext';
+export {default as ThemeProvider} from './styles/ThemeProvider';
+export {default as useTheme} from './styles/use-theme';
