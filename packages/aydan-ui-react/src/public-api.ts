@@ -32,6 +32,7 @@ export * from './AlertDialog/AlertDialog';
 export * from './AspectRatio/AspectRatio';
 export * from './Avatar/Avatar';
 export * from './Badge/Badge';
+export * from './Breadcrumb/Breadcrumb';
 export * from './Button/Button';
 
 export {default as ThemeContext} from './styles/ThemeContext';
