@@ -28,6 +28,7 @@
 
 export * from './Accordion/Accordion';
 export * from './Alert/Alert';
+export * from './AlertDialog/AlertDialog';
 export * from './Button/Button';
 
 export {default as ThemeContext} from './styles/ThemeContext';
