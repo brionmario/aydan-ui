@@ -1,0 +1,45 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2024, Brion Mario
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+import {z} from 'zod';
+import {registryIndexSchema} from '../schemas/registry';
+import getShadCNRegistry from './getShadCNRegistry';
+
+export default async function getShadCNComponentIndex(
+  style: string,
+  tree: z.infer<typeof registryIndexSchema>,
+): Promise<any> {
+  try {
+    const paths = tree.map(item => `styles/${style}/${item.name}.json`);
+    const result = await getShadCNRegistry(paths);
+
+    console.log('result', JSON.stringify(result, null, 2));
+
+    return registryIndexSchema.parse(result);
+  } catch (error) {
+    console.log('error tree', JSON.stringify(tree, null, 2));
+    console.log('error', JSON.stringify(error, null, 2));
+    throw new Error(`Failed to fetch tree from registry.`);
+  }
+}

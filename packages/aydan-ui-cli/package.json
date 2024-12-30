@@ -1,0 +1,86 @@
+{
+  "version": "0.0.0",
+  "name": "@aydan-ui/cli",
+  "description": "CLI for Aydan UI",
+  "keywords": [
+    "brionmario",
+    "opensource",
+    "aydan-ui",
+    "codemod"
+  ],
+  "homepage": "https://github.com/brionmario/aydan-ui#readme",
+  "bugs": {
+    "url": "https://github.com/brionmario/aydan-ui/issues"
+  },
+  "license": "MIT",
+  "author": "Brion Mario",
+  "bin": {
+    "aydan-ui": "dist/esm/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brionmario/aydan-ui.git",
+    "directory": "packages/aydan-ui-codemod"
+  },
+  "type": "module",
+  "commonjs": "dist/cjs/index.js",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production rollup --config rollup.config.ts --configPlugin typescript",
+    "build:dev": "NODE_ENV=development rollup --config rollup.config.ts --configPlugin typescript",
+    "build:watch": "pnpm build --watch",
+    "dev": "pnpm link --global && pnpm build:watch",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,mdx}\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "pnpm jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@brionmario/eslint-plugin": "^0.3.4",
+    "@brionmario/prettier-config": "^0.1.0",
+    "@jest/globals": "^29.7.0",
+    "@jest/types": "^29.6.3",
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^17.0.45",
+    "@types/prompts": "^2.4.9",
+    "eslint": "^8.41.0",
+    "jest": "^29.7.0",
+    "prettier": "^2.8.8",
+    "rollup": "^4.18.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@shevi/logger": "^0.1.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "diff": "^7.0.0",
+    "execa": "^9.4.0",
+    "fs-extra": "^11.2.0",
+    "https-proxy-agent": "^7.0.5",
+    "node-fetch": "^3.3.2",
+    "ora": "^8.1.0",
+    "p-limit": "^6.2.0",
+    "prompts": "^2.4.2",
+    "type-fest": "^4.26.1",
+    "zod": "^3.21.4"
+  }
+}
