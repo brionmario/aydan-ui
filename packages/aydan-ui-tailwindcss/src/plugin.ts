@@ -62,20 +62,7 @@ const plugin: Plugin = tailwindPlugin(
       },
     });
 
-    addBase({
-      '@keyframes accordion-down': {
-        from: {height: '0'},
-        to: {height: 'var(--radix-accordion-content-height)'},
-      },
-      '@keyframes accordion-up': {
-        from: {height: 'var(--radix-accordion-content-height)'},
-        to: {height: '0'},
-      },
-      '@keyframes caret-blink': {
-        '0%,70%,100%': {opacity: '1'},
-        '20%,50%': {opacity: '0'},
-      },
-    });
+    addBase({});
   },
   {
     darkMode: ['class'],
@@ -141,15 +128,8 @@ const plugin: Plugin = tailwindPlugin(
             '"Noto Color Emoji"',
           ],
         },
-        keyframes: {
-          'caret-blink': {
-            '0%,70%,100%': {opacity: '1'},
-            '20%,50%': {opacity: '0'},
-          },
-        },
-        animation: {
-          'caret-blink': 'caret-blink 1.25s ease-out infinite',
-        },
+        keyframes: {},
+        animation: {},
       },
     },
   },
