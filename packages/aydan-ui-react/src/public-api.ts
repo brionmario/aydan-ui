@@ -26,6 +26,7 @@
 // This is the Public API and should have both named and default exports.
 /* eslint-disable import/prefer-default-export */
 
+export * from './Alert/Alert';
 export * from './Button/Button';
 
 export {default as ThemeContext} from './styles/ThemeContext';
