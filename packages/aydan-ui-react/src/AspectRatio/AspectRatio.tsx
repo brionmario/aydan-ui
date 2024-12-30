@@ -22,16 +22,10 @@
  * SOFTWARE.
  */
 
-// FILE LEVEL ESLINT SUPPRESSIONS:
-// This is the Public API and should have both named and default exports.
-/* eslint-disable import/prefer-default-export */
+'use client';
 
-export * from './Accordion/Accordion';
-export * from './Alert/Alert';
-export * from './AlertDialog/AlertDialog';
-export * from './AspectRatio/AspectRatio';
-export * from './Button/Button';
+import * as AspectRatioPrimitive from '@radix-ui/react-aspect-ratio';
 
-export {default as ThemeContext} from './styles/ThemeContext';
-export {default as ThemeProvider} from './styles/ThemeProvider';
-export {default as useTheme} from './styles/use-theme';
+const AspectRatio = AspectRatioPrimitive.Root;
+
+export {AspectRatio};
