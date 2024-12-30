@@ -74,6 +74,10 @@
   },
   "dependencies": {
     "@aydan-ui/themes": "workspace:^",
-    "@aydan-ui/utils": "workspace:^"
+    "@aydan-ui/utils": "workspace:^",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^1.2.1",
+    "lucide-react": "0.359.0",
+    "tailwind-merge": "^1.12.0"
   }
 }
