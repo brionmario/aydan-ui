@@ -37,6 +37,7 @@ export * from './Button/Button';
 export * from './Calendar/Calendar';
 export * from './Card/Card';
 export * from './Carousel/Carousel';
+export * from './Chart/Chart';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
