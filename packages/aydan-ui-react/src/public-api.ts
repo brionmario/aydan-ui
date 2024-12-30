@@ -30,6 +30,7 @@ export * from './Accordion/Accordion';
 export * from './Alert/Alert';
 export * from './AlertDialog/AlertDialog';
 export * from './AspectRatio/AspectRatio';
+export * from './Avatar/Avatar';
 export * from './Button/Button';
 
 export {default as ThemeContext} from './styles/ThemeContext';
