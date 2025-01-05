@@ -32,7 +32,6 @@ module.exports = {
   extends: [
     'plugin:@brionmario/react',
     'plugin:@brionmario/typescript',
-    'plugin:@brionmario/strict',
     'plugin:@brionmario/internal',
     'plugin:@brionmario/jest',
     'plugin:@brionmario/prettier',
