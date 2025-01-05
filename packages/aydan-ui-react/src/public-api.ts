@@ -43,6 +43,7 @@ export * from './Command/Command';
 export * from './ContextMenu/ContextMenu';
 export * from './Dialog/Dialog';
 export * from './Drawer/Drawer';
+export * from './DropdownMenu/DropdownMenu';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
