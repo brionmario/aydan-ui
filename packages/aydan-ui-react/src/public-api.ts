@@ -39,6 +39,7 @@ export * from './Card/Card';
 export * from './Carousel/Carousel';
 export * from './Chart/Chart';
 export * from './Checkbox/Checkbox';
+export * from './Command/Command';
 export * from './Dialog/Dialog';
 
 export {default as ThemeContext} from './styles/ThemeContext';
