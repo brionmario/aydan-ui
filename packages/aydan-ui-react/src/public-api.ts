@@ -56,6 +56,7 @@ export * from './Progress/Progress';
 export * from './RadioGroup/RadioGroup';
 export * from './Resizable/Resizable';
 export * from './ScrollArea/ScrollArea';
+export * from './Select/Select';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
