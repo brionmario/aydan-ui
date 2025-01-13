@@ -52,6 +52,7 @@ export * from './Label/label';
 export * from './MenuBar/Menubar';
 export * from './Pagination/Pagination';
 export * from './Popover/Popover';
+export * from './Progress/Progress';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
