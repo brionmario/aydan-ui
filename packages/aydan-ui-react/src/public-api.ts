@@ -49,8 +49,8 @@ export * from './HoverCard/HoverCard';
 export * from './Input/Input';
 export * from './InputOTP/InputOTP';
 export * from './Label/label';
-export * from './MenuBar/menubar';
-export * from './Pagination/pagination';
+export * from './MenuBar/Menubar';
+export * from './Pagination/Pagination';
 export * from './Popover/Popover';
 
 export {default as ThemeContext} from './styles/ThemeContext';
