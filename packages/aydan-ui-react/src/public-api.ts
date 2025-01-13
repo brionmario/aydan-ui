@@ -50,6 +50,7 @@ export * from './Input/Input';
 export * from './InputOTP/InputOTP';
 export * from './Label/label';
 export * from './MenuBar/menubar';
+export * from './Pagination/pagination';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
