@@ -44,6 +44,7 @@ export * from './ContextMenu/ContextMenu';
 export * from './Dialog/Dialog';
 export * from './Drawer/Drawer';
 export * from './DropdownMenu/DropdownMenu';
+export * from './Form/Form';
 export * from './Label/label';
 
 export {default as ThemeContext} from './styles/ThemeContext';
