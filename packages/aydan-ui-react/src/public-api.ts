@@ -47,6 +47,7 @@ export * from './DropdownMenu/DropdownMenu';
 export * from './Form/Form';
 export * from './HoverCard/HoverCard';
 export * from './Input/Input';
+export * from './InputOTP/InputOTP';
 export * from './Label/label';
 
 export {default as ThemeContext} from './styles/ThemeContext';
