@@ -1,7 +1,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2024, Brion Mario
+ * Copyright (c) 2025, Brion Mario
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,30 +22,22 @@
  * SOFTWARE.
  */
 
-// FILE LEVEL ESLINT SUPPRESSIONS:
-// This is the Public API and should have both named and default exports.
-/* eslint-disable import/prefer-default-export */
+'use client';
 
-export * from './Accordion/Accordion';
-export * from './Alert/Alert';
-export * from './AlertDialog/AlertDialog';
-export * from './AspectRatio/AspectRatio';
-export * from './Avatar/Avatar';
-export * from './Badge/Badge';
-export * from './Breadcrumb/Breadcrumb';
-export * from './Button/Button';
-export * from './Calendar/Calendar';
-export * from './Card/Card';
-export * from './Carousel/Carousel';
-export * from './Chart/Chart';
-export * from './Checkbox/Checkbox';
-export * from './Command/Command';
-export * from './ContextMenu/ContextMenu';
-export * from './Dialog/Dialog';
-export * from './Drawer/Drawer';
-export * from './DropdownMenu/DropdownMenu';
-export * from './Label/label';
+import * as React from 'react';
+import * as LabelPrimitive from '@radix-ui/react-label';
+import {cva, type VariantProps} from 'class-variance-authority';
 
-export {default as ThemeContext} from './styles/ThemeContext';
-export {default as ThemeProvider} from './styles/ThemeProvider';
-export {default as useTheme} from './styles/use-theme';
+import {cn} from '@aydan-ui/utils';
+
+const labelVariants = cva('text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70');
+
+const Label = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants>
+>(({className, ...props}, ref) => (
+  <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props} />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+
+export {Label};
