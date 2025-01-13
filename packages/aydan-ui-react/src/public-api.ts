@@ -49,7 +49,7 @@ export * from './HoverCard/HoverCard';
 export * from './Input/Input';
 export * from './InputOTP/InputOTP';
 export * from './Label/Label';
-export * from './MenuBar/Menubar';
+export * from './MenuBar/MenuBar';
 export * from './Pagination/Pagination';
 export * from './Popover/Popover';
 export * from './Progress/Progress';
