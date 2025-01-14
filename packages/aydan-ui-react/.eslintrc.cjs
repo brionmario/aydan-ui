@@ -47,6 +47,10 @@ module.exports = {
   },
   plugins: ['@brionmario'],
   rules: {
+    '@typescript-eslint/no-redeclare': 'off',
+    '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/no-shadow': 'off',
     'import/prefer-default-export': 'off',
+    'no-shadow': 'off',
   },
 };
