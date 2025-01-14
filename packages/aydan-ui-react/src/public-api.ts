@@ -58,6 +58,7 @@ export * from './Resizable/Resizable';
 export * from './ScrollArea/ScrollArea';
 export * from './Select/Select';
 export * from './Separator/Separator';
+export * from './Sheet/Sheet';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
