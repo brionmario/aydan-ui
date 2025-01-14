@@ -63,6 +63,7 @@ export * from './Sidebar/Sidebar';
 export * from './Skeleton/Skeleton';
 export * from './Slider/Slider';
 export * from './Switch/Switch';
+export * from './Table/Table';
 export * from './Tooltip/Tooltip';
 
 export * from './useMobile/useMobile';
