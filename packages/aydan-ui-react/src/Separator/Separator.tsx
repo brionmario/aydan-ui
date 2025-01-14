@@ -1,7 +1,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2024, Brion Mario.
+ * Copyright (c) 2025, Brion Mario
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,31 +22,25 @@
  * SOFTWARE.
  */
 
-const path = require('path');
+'use client';
 
-module.exports = {
-  env: {
-    es6: true,
-    node: true,
-  },
-  extends: [
-    'plugin:@brionmario/react',
-    'plugin:@brionmario/typescript',
-    'plugin:@brionmario/internal',
-    'plugin:@brionmario/jest',
-    'plugin:@brionmario/prettier',
-    'plugin:react/jsx-runtime',
-  ],
-  parserOptions: {
-    ecmaVersion: 2018,
-    project: [
-      path.resolve(__dirname, 'tsconfig.lib.json'),
-      path.resolve(__dirname, 'tsconfig.spec.json'),
-      path.resolve(__dirname, 'tsconfig.eslint.json'),
-    ],
-  },
-  plugins: ['@brionmario'],
-  rules: {
-    'import/prefer-default-export': 'off',
-  },
-};
+import * as React from 'react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+
+import {cn} from '@aydan-ui/utils';
+
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+>(({className, orientation = 'horizontal', decorative = true, ...props}, ref) => (
+  <SeparatorPrimitive.Root
+    ref={ref}
+    decorative={decorative}
+    orientation={orientation}
+    className={cn('shrink-0 bg-border', orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]', className)}
+    {...props}
+  />
+));
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+
+export {Separator};
