@@ -68,4 +68,4 @@ export * from './useMobile/useMobile';
 
 export {default as ThemeContext} from './styles/ThemeContext';
 export {default as ThemeProvider} from './styles/ThemeProvider';
-export {default as useTheme} from './styles/use-theme';
+export {default as useTheme} from './styles/useTheme';

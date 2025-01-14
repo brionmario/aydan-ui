@@ -1,7 +1,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2024, Brion Mario.
+ * Copyright (c) 2025, Brion Mario
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,36 +22,32 @@
  * SOFTWARE.
  */
 
-const path = require('path');
+'use client';
 
-module.exports = {
-  env: {
-    es6: true,
-    node: true,
-  },
-  extends: [
-    'plugin:@brionmario/react',
-    'plugin:@brionmario/typescript',
-    'plugin:@brionmario/internal',
-    'plugin:@brionmario/jest',
-    'plugin:@brionmario/prettier',
-    'plugin:react/jsx-runtime',
-  ],
-  parserOptions: {
-    ecmaVersion: 2018,
-    project: [
-      path.resolve(__dirname, 'tsconfig.lib.json'),
-      path.resolve(__dirname, 'tsconfig.spec.json'),
-      path.resolve(__dirname, 'tsconfig.eslint.json'),
-    ],
-  },
-  plugins: ['@brionmario'],
-  rules: {
-    '@typescript-eslint/naming-convention': 'off',
-    '@typescript-eslint/no-redeclare': 'off',
-    '@typescript-eslint/no-shadow': 'off',
-    'import/prefer-default-export': 'off',
-    'no-shadow': 'off',
-    'sort-keys': 'off',
-  },
+import {Toaster as Sonner} from 'sonner';
+import useTheme from '../styles/useTheme';
+
+type ToasterProps = React.ComponentProps<typeof Sonner>;
+
+const Toaster = ({...props}: ToasterProps) => {
+  const {colorScheme = 'system'} = useTheme();
+
+  return (
+    <Sonner
+      theme={colorScheme as ToasterProps['theme']}
+      className="toaster group"
+      toastOptions={{
+        classNames: {
+          toast:
+            'group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg',
+          description: 'group-[.toast]:text-muted-foreground',
+          actionButton: 'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground',
+          cancelButton: 'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground',
+        },
+      }}
+      {...props}
+    />
+  );
 };
+
+export {Toaster};
