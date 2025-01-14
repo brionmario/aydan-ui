@@ -61,6 +61,7 @@ export * from './Separator/Separator';
 export * from './Sheet/Sheet';
 export * from './Sidebar/Sidebar';
 export * from './Skeleton/Skeleton';
+export * from './Slider/Slider';
 export * from './Tooltip/Tooltip';
 
 export * from './useMobile/useMobile';
