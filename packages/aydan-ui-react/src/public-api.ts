@@ -65,6 +65,7 @@ export * from './Slider/Slider';
 export * from './Switch/Switch';
 export * from './Table/Table';
 export * from './Tabs/Tabs';
+export * from './Textarea/Textarea';
 export * from './Tooltip/Tooltip';
 
 export * from './useMobile/useMobile';
