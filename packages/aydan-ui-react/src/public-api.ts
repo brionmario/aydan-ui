@@ -59,6 +59,7 @@ export * from './ScrollArea/ScrollArea';
 export * from './Select/Select';
 export * from './Separator/Separator';
 export * from './Sheet/Sheet';
+export * from './Skeleton/Skeleton';
 export * from './Tooltip/Tooltip';
 
 export * from './useMobile/useMobile';
