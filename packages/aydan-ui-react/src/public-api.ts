@@ -68,6 +68,7 @@ export * from './Tabs/Tabs';
 export * from './Textarea/Textarea';
 export * from './Toast/Toast';
 export * from './Toaster/Toaster';
+export * from './Toggle/Toggle';
 export * from './Tooltip/Tooltip';
 
 export * from './useMobile/useMobile';
